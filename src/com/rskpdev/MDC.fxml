@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rskpdev.Controller">
+    <top>
+        <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar style="-fx-background-color: #ffffff;">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+               <VBox.margin>
+                  <Insets left="-4.0" />
+               </VBox.margin>
+                </MenuBar>
+                <HBox style="-fx-background-color: #404040;">
+                    <children>
+                        <TextField fx:id="search_box" style="-fx-background-color: #ffffff;">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" top="5.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                        <Button fx:id="search_button" mnemonicParsing="false" onMouseClicked="#searchClicked" style="-fx-background-color: #595959;" text="Search" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" top="5.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Button>
+                        <Region prefHeight="39.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </Region>
+                        <Button fx:id="download" mnemonicParsing="false" onMouseClicked="#download" style="-fx-background-color: #595959;" text="Download" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets bottom="5.0" right="8.0" top="5.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+            <HBox prefHeight="639.0" prefWidth="1100.0">
+               <children>
+                  <ImageView fitHeight="585.0" fitWidth="403.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../../../../../IdeaProjects/MDC/src/assets/cover_placeholder.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="586.0" prefWidth="401.0">
+                     <children>
+                        <Label fx:id="title" prefHeight="17.0" prefWidth="419.0" text="Title" />
+                        <Label fx:id="year" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="419.0" text="Year" />
+                        <Label fx:id="rating" layoutX="10.0" layoutY="27.0" prefHeight="17.0" prefWidth="419.0" text="Rating" />
+                        <Label fx:id="available" />
+                        <Label fx:id="summary" layoutX="10.0" layoutY="44.0" prefHeight="598.0" prefWidth="401.0" text="Summary" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            </children>
+        </VBox>
+    </top>
+</BorderPane>
